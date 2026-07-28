@@ -1,0 +1,17 @@
+{
+  "name": "@cinatra-ai/blog-content-skill",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "Operator guidance for the Blog Content dashboard surface — the project→idea→post selection chain across its nine portlets, the draft-editor/hero-image/version-history panes, and launching the blog-content publish workflow through the publish-launcher, including its idempotent WordPress-draft short-circuit. Extracted from @cinatra-ai/assistant-skills (cinatra#2090).",
+  "type": "module",
+  "files": [
+    "skills"
+  ],
+  "cinatra": {
+    "apiVersion": "cinatra.ai/v1",
+    "kind": "skill",
+    "displayName": "Blog Content Skill",
+    "skillRole": "injectable",
+    "dependencies": []
+  }
+}
