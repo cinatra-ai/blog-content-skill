@@ -39,7 +39,7 @@ projects-pane → project-detail
 - **publish-launcher** wraps `workflow_template_instantiate` for the `blog-content-workflow` BPMN. It renders typed pickers from the template's placeholder hints:
   - `projectId` (hint `blog-project`) — object-list picker over blog projects.
   - `postId` (hint `blog-post`) — object-list picker over blog posts.
-  - `wordpressInstanceId` (hint `wordpress-instance`) — picker over the operator's connected WordPress instances (credentials stripped server-side); the backing tool, `wordpress_instances_list`, was one of the 12 per-operation facade tools deleted in the connector's open-catalog cutover (wordpress-mcp-connector#101) — content operations against the selected instance now go through the generic `wordpress_site_tools_list` / `wordpress_site_tool_call` catalog primitives instead.
+  - `wordpressInstanceId` (hint `wordpress-instance`) — picker over the operator's connected WordPress instances (credentials stripped server-side); the per-operation connector tool that used to back it was removed in the connector's open-catalog cutover (wordpress-mcp-connector#101) — content operations against the selected instance now go through the generic `wordpress_site_tools_list` / `wordpress_site_tool_call` catalog primitives instead.
 - The workflow steps are: `review_publish_bundle` (approval) → `create_wordpress_draft` (agent: `@cinatra-ai/blog-wordpress-publish-agent`) → `publish_in_wordpress_admin` (manual) → `notify_publish_checkpoint_complete`.
 - **publish-status** shows the project's workflows + their statuses (read-only summary).
 
