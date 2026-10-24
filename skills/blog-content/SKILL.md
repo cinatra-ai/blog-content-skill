@@ -31,7 +31,7 @@ projects-pane → project-detail
 - **ideas-pane** — lists `@cinatra-ai/assets:blog-idea` objects under the selected project. Its `selectedId` becomes the parent for **posts-pane**.
 - **posts-pane** — lists `@cinatra-ai/assets:blog-post` objects under the selected idea. Its `selectedId` flows downstream to:
   - **draft-editor** — inline markdown editor over `postArtifactId` (ref-swap via `blog_post_update`).
-  - **hero-image** — draws no image and offers no regeneration: the host has no card for its kind (`artifact-edit-binary-prompt`), so it shows only the line "Portlet kind artifact-edit-binary-prompt is not yet available." The post's featured image is its own artifact (`@cinatra-ai/blog-image-artifact:blog-image`), drawn by that extension's display on its artifact page; never promise an image preview or a remake of the image on this dashboard.
+  - **hero-image** — draws no image and offers no regeneration: the host has no card for its kind (`artifact-edit-binary-prompt`), so it draws only its header (instanceId and kind@version) and the line "Portlet kind artifact-edit-binary-prompt is not yet available." The post's featured image is the plain image artifact (`@cinatra-ai/image-artifact:image`), drawn by the image display on its artifact page, the review step and the review card; never promise an image preview or a remake of the image on this dashboard.
   - **version-history** — the `postArtifactId` ref-swap timeline (only events that changed the field).
 
 ## Publish workflow
