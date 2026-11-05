@@ -23,4 +23,4 @@ The operator's guide to Cinatra's Blog Content dashboard: it walks an assistant 
 - Explain the draft-editor, hero-image, and version-history panes over the selected post
 - Walk through launching the publish workflow with its typed project, post, and instance pickers
 - Describe the template's four-step publish sequence and the read-only status pane, and what its agent step does at each installed publish-agent version
-- Explain what a re-run does at each version: the confirmation gate and the written-back page address at 0.4.x, the WordPress-draft short-circuit at 0.3.x
+- Explain what a re-run does at each version: the confirmation gate and the written-back page address at 0.4.x and 0.5.x, the WordPress-draft short-circuit at 0.3.x
